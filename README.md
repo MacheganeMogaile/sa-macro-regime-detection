@@ -21,8 +21,8 @@ Model validation confirms high state stability, eliminating short-term chatter:
 | **$\Delta$ NEER (% Change)** | **-1.75%** | **-0.53%** |
 | **Real Repo Rate (%)** | **-0.64%** | **2.92%** |
 
-* **State 0 (Macro Stress):** Captures acute structural shock windows (such as the 2008 Global Financial Crisis and 2020 COVID-19 pandemic), characterized by negative real interest rates (-0.64%), depressed GDP growth (0.39%), and sharp currency depreciation (-1.75%).
-* **State 1 (Normal Operating Regime):** Captures baseline economic operating conditions where the South African Reserve Bank maintains positive real rates (2.92%) to manage inflation alongside steady GDP growth (0.60%).
+* **State 0 (Macro Stress)-** Captures acute structural shock windows (such as the 2008 Global Financial Crisis and 2020 COVID-19 pandemic), characterized by negative real interest rates (-0.64%), depressed GDP growth (0.39%), and sharp currency depreciation (-1.75%).
+* **State 1 (Normal Operating Regime)-** Captures baseline economic operating conditions where the South African Reserve Bank maintains positive real rates (2.92%) to manage inflation alongside steady GDP growth (0.60%).
 
 ---
 
@@ -30,4 +30,4 @@ Model validation confirms high state stability, eliminating short-term chatter:
 * **Language:** Python
 * **Environment:** Google Colab
 * **Libraries:** `hmmlearn`, `pandas`, `numpy`, `matplotlib`, `seaborn`
-* **Feature Engineering:** Stationarity transformations ($\Delta \text{NEER}_t$, $\text{Inflation}_{\text{YoY}}$, $\text{Real Repo Rate}_t$, $\text{GDP}_{\text{QoQ}}$) to ensure scale-invariant clustering.
+* **Feature Engineering:** Transformed non-stationary macroeconomic levels into stationary growth rates and differences (`ΔNEER_t`, `Inflation_YoY`, `Real_Repo_Rate_t`, `GDP_Growth_QoQ`) to ensure consistent feature representation across the 26-year time horizon.
